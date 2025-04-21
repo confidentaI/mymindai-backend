@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException, status
 from fastapi.responses import JSONResponse, FileResponse
 from pydantic import BaseModel
