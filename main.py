@@ -7,7 +7,14 @@ import openai
 import shutil
 import os
 import requests
-from config import OPENAI_API_KEY, MYMIND_API_KEY
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Optionnel sur Render mais utile localement
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MYMIND_API_KEY = os.getenv("MYMIND_API_KEY")
+
 
 # Middleware de sécurité
 def verify_api_key(request: Request):
