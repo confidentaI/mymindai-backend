@@ -5,8 +5,10 @@ import openai
 import shutil
 import os
 import requests
-from config import OPENAI_API_KEY, MYMIND_API_KEY
+import os
 
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MYMIND_API_KEY = os.getenv("MYMIND_API_KEY")
 app = FastAPI()
 
 openai.api_key = OPENAI_API_KEY
